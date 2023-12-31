@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai aur code</title>
+</head>
+<body style="background-color:#212121; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+
+    </div>
+    
+<script>
+    const parent =  document.querySelector(".parent");   //jema parent ma kai values che ejova mate use thay and bhadhi check karvi hoi to value to queryselector all aave 
+    
+    // console.log(parent);
+
+    //console.log(parent.children); 
+    
+    //console.log(parent.children[1],innerHTML);
+    
+// for html collection we can use  for loop  and bhadha ne line by line print karva mate
+
+//for(let i = 0 ; i< parent.children.length; i++){
+    //console.log(parent.children[i].innerHTML);
+// }
+
+// for another properties of the parent and child 
+//console.log(parent.firstElementChild);
+//condole.log(parent.lastElementChild);
+
+const dayOne = document.querySelector(".day");
+//console.log(dayOne);
+//console.log(dayOne.parentNode);
+//console.log(dayOne.nextSibling);
+
+console.log("Nodes",parent.childNodes);
+
+
+</script>
+</body>
+</html>

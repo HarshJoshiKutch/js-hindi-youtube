@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+</body>
+
+<script>
+    function addLanguage(langname){
+        const li = document.createElement('li'); // list name no element create karyu 
+        li.innerHTML=`${langname}`
+        document.querySelector('.language').appendChild(li); // language name no class select karva . no use karyo
+    }
+    addLanguage("python");
+    addLanguage("typescript");
+
+    // aa jya uper na code ma jya addlanguage kariye chiye tya optimization ni problem thati hoi che to ene less karva mate 
+
+    function addOptiLanguage(langname){
+        const li = document.createElement('li');
+        
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("golang")
+
+    // Edit values
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "Mojo"; // aana karta nicheno best optimiize way che te use karta
+    // tema first new element create karta and 
+    const newli = document.createElement('li');
+    newli.textContent="Mojo"; // aama content e haji hava ma che ene add karavo padse koi k sathe 
+    secondLang.replaceWith(newli);
+
+    // edit 
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>Typescript</li>';
+
+    // remove karva mate 
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+
+
+
+    
+</script>
+
+
+</html>
